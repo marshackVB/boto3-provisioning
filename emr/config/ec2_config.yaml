@@ -1,0 +1,15 @@
+ec2:
+  aws_access_key: <acess key number>
+  aws_secret_access_key: <secret access key number>
+  region_name: us-east-1
+  instance_name: MyGPUInstance
+  instance_count: 1
+  instance_type: p2.xlarge
+  key_name: <ec2 key pair name> # EC2 keypair to SSH into master node
+  subnet_id: subnet-56f33d7a # Default in us-east-1
+  ami: ami-0484cefb8f48dafe8 # Ubuntu deep learning ami
+  instance_role_arn: <role arn>
+  instance_role_name: <role name>
+  ebs_volume_size: 75
+  security_group_id: <security group id>
+  security_group_name: <security group name>

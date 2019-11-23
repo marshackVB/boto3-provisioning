@@ -1,0 +1,16 @@
+emr:
+  aws_access_key: <acess key number>
+  aws_secret_access_key: <secret access key number>
+  region_name: us-east-1
+  cluster_name: MyCluster
+  instance_count: 2 # Number of EC2 instances (size of the cluster)
+  master_instance_type: m4.large # EC2 instance types
+  slave_instance_type: m4.large
+  key_name: <ec2 key pair name> # EC2 keypair to SSH into master node
+  subnet_id: subnet-56f33d7a # Default in us-east-1
+  log_uri: s3://LogBucketName # S3 bucket where EMR logs will be stored
+  software_version: emr-5.19.0 # EMR release number
+  script_bucket_name: <S3 bucket name> # The S3 bucket where bootstrap scripts will be saved
+  bootstrap_path: /home/user/folder/ # The local folder where bootstrap scripts are saved
+  cluster_bootstrap_script: cluster_bootstrap.sh # Script to run on all machines
+  master_bootstrap_script: master_bootstrap.sh # Script to run on master node only
